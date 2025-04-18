@@ -1,6 +1,10 @@
+"use client";
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomeScreen: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div style={styles.container}>
       <header style={styles.header}>
@@ -12,7 +16,7 @@ const HomeScreen: React.FC = () => {
         </p>
         <div style={styles.buttonContainer}>
           <button style={styles.button}>Python</button>
-          <button style={styles.button}>JavaScript</button>
+          <button style={styles.button} onClick={() => navigate('/javascript-course')}>JavaScript</button>
           <button style={styles.button}>C++</button>
         </div>
       </main>

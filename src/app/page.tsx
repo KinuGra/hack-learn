@@ -1,5 +1,10 @@
-import HomeScreen from "../components/tmp";
+"use client";
 
-export default function Home() {
-  return <HomeScreen />;
-}
+import React from 'react';
+import App from '../app';
+
+const Page: React.FC = () => {
+  return <App />;
+};
+
+export default Page;

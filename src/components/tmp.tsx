@@ -12,8 +12,8 @@ const HomeScreen: React.FC = () => {
         </p>
         <div style={styles.buttonContainer}>
           <button style={styles.button}>Python</button>
-          <button style={styles.button}>C++?</button>
-          <button style={styles.button}>React</button>
+          <button style={styles.button}>JavaScript</button>
+          <button style={styles.button}>C++</button>
         </div>
       </main>
       <footer style={styles.footer}>

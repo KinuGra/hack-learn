@@ -2,9 +2,16 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const HomeScreen: React.FC = () => {
   const navigate = useNavigate();
+  const router = useRouter();
+
+  const navigateToPythonCourse = () => {
+    router.push('/python-course');
+  };
+
   return (
     <div style={styles.container}>
       <header style={styles.header}>
@@ -15,7 +22,7 @@ const HomeScreen: React.FC = () => {
           プログラミングを楽しく学びましょう！以下のコースから選んでください。
         </p>
         <div style={styles.buttonContainer}>
-          <button style={styles.button}>Python</button>
+          <button style={styles.button} onClick={navigateToPythonCourse}>Python</button>
           <button style={styles.button} onClick={() => navigate('/javascript-course')}>JavaScript</button>
           <button style={styles.button}>C++</button>
         </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomeScreen from './components/start';
+import HomeScreen from './components/start/start';
 import JavaScriptCourse from './components/javascript/jsmain';
 import {Lesson1,Lesson2,Lesson3,Lesson4,Lesson5,Lesson6} from '../src/app/nrmljs-course/lesson1/lesson';
 const App: React.FC = () => {

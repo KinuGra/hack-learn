@@ -1,6 +1,7 @@
 import '../lesson/lessbtype';
 import { LessonBase } from '../lesson/lessonbase';
 
+
 export function Lesson1() {
     const allLessons = {
         title: "console.log()",

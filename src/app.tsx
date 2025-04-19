@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Route path="/javascript-level-2" element={<Lesson2 />} />
         <Route path="/javascript-level-3" element={<Lesson3 />} />
         <Route path="/javascript-level-4" element={<Lesson4 />} />
-        <Route path="/javascript-level-5" element={<div>レベル5の内容</div>} />
+        <Route path="/javascript-level-5" element={<div>coming soon...</div>} />
       </Routes>
     </Router>
   );

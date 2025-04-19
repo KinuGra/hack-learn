@@ -5,6 +5,6 @@ export type jsles = {
     example: string;
     //exoutputはstring型ではなくコード型？で
     exoutput: string;
-    
+    work: string;
     onClick: () => void;
 }

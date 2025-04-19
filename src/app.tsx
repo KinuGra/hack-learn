@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeScreen from './components/start';
 import JavaScriptCourse from './components/javascript/jsmain';
-import {Lesson1} from '../src/app/nrmljs-course/lesson1/lesson';
+import {Lesson1,Lesson2,Lesson3,Lesson4} from '../src/app/nrmljs-course/lesson1/lesson';
 const App: React.FC = () => {
   return (
     <Router>
@@ -12,9 +12,9 @@ const App: React.FC = () => {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/javascript-course" element={<JavaScriptCourse />} />
         <Route path="/javascript-level-1" element={<Lesson1 />} />
-        <Route path="/javascript-level-2" element={<div>レベル2の内容</div>} />
-        <Route path="/javascript-level-3" element={<div>レベル3の内容</div>} />
-        <Route path="/javascript-level-4" element={<div>レベル4の内容</div>} />
+        <Route path="/javascript-level-2" element={<Lesson2 />} />
+        <Route path="/javascript-level-3" element={<Lesson3 />} />
+        <Route path="/javascript-level-4" element={<Lesson4 />} />
         <Route path="/javascript-level-5" element={<div>レベル5の内容</div>} />
       </Routes>
     </Router>

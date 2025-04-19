@@ -1,3 +1,7 @@
+更新情報とか
+zatunohito-lesson1とlesson関数...:ひらくとレンダリングの表示や操作は問題ないが、nextエラーが出る。
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

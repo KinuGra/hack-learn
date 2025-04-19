@@ -76,12 +76,27 @@ export function Lesson5(){
         exoutput: "30",
         work: "数値型xに500、数値型yに30を代入して、xとyを足してみよう。\n \n 文字列型xに500、文字列型yに30を代入して、xとyを足してみよう。",
         onClick: () => {
-            console.log("Lesson 4 clicked");
+            console.log("Lesson 5 clicked");
         }
     };
     return (
         <LessonBase {...allLessons} />
     );
-
-
+}
+export function Lesson6(){
+    const allLessons = {
+        title: "真偽値型",
+        description: "真偽値型を使う", 
+        details: "真偽値型を使います。真偽値型はtrueまたはfalseの値を持ちます。使い道→条件分岐やループ処理に使います。",
+        image: "/booleanimage.svg",
+        example: "while (true) { console.log(\"Hello World\"); }",
+        exoutput: "Hello World\nHello World\nHello World\n...",
+        work: "while文を使って、\"こんにちは！ぼくだよ\"と表示してみよう",
+        onClick: () => {
+            console.log("Lesson 6 clicked");
+        }
+    };
+    return (
+        <LessonBase {...allLessons} />
+    );
 }

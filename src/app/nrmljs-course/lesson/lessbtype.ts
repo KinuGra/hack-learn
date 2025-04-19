@@ -6,5 +6,6 @@ export type jsles = {
     //exoutputはstring型ではなくコード型？で
     exoutput: string;
     work: string;
+    image?: any;
     onClick: () => void;
 }

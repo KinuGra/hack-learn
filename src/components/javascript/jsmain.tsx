@@ -14,13 +14,13 @@ const JavaScriptMain: React.FC = () => {
           JavaScriptのスキルをレベルアップしましょう！以下のレベルを選択してください。
         </p>
         <div style={styles.buttonContainer}>
-          {[1, 2, 3, 4, 5].map((level) => (
+          {[1, 2, 3, 4, 5, 6].map((lesson) => (
             <button
-              key={level}
+              key={lesson}
               style={styles.button}
-              onClick={() => navigate(`/javascript-level-${level}`)}
+              onClick={() => navigate(`/javascript-lesson-${lesson}`)}
             >
-              レベル {level}
+              レベル {lesson}
             </button>
           ))}
         </div>

@@ -74,10 +74,8 @@ export function Lesson5(){
         details: "数値型と文字列型を使います。数値型は数字を扱い、文字列型は文字を扱います。使い道→数値型は計算に使い、文字列型は文字の操作に使います。",
         example: "let x = \"10\"; const y = \"20\"; console.log(x + y);",
         exoutput: "30",
-        work: "数値型xに500、数値型yに30を代入して、xとyを足してみよう。\n \n 文字列型xに500、文字列型yに30を代入して、xとyを足してみよう。",
-        onClick: () => {
-            console.log("Lesson 5 clicked");
-        }
+        work: "数値型xに500、数値型yに30を代入して、xとyを足してみよう。 \n 文字列型xに500、文字列型yに30を代入して、xとyを足してみよう。",
+        
     };
     return (
         <LessonBase {...allLessons} />
@@ -92,9 +90,7 @@ export function Lesson6(){
         example: "while (true) { console.log(\"Hello World\"); }",
         exoutput: "Hello World\nHello World\nHello World\n...",
         work: "while文を使って、\"こんにちは！ぼくだよ\"と表示してみよう",
-        onClick: () => {
-            console.log("Lesson 6 clicked");
-        }
+        
     };
     return (
         <LessonBase {...allLessons} />

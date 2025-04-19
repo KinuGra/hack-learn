@@ -7,5 +7,5 @@ export type jsles = {
     exoutput: string;
     work: string;
     image?: any;
-    onClick: () => void;
+    onClick?: () => void;
 }

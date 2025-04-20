@@ -17,13 +17,13 @@ const JavaScriptMain: React.FC = () => {
           JavaScriptのスキルをレベルアップしましょう！以下のレベルを選択してください。
         </p>
         <div style={styles.buttonContainer}>
-          {[1, 2, 3, 4, 5, 6].map((lesson) => (
+          {["setup" ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((lesson) => (
             <button
               key={lesson}
               style={styles.button}
               onClick={() => navigate(`/javascript-lesson-${lesson}`)}
             >
-              レベル {lesson}
+              {lesson === "setup" ? "セットアップ" : `レベル ${lesson}`}
             </button>
           ))}
         </div>

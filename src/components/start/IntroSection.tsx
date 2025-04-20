@@ -4,8 +4,8 @@ import { styles } from './styles';
 const IntroSection: React.FC = () => {
   return (
     <section style={styles.introSection}>
-      <h1 style={styles.introTitle}>Hack-and-Learn</h1>
-      <p style={styles.introDescription}>学んで、成長する</p>
+      <h1 style={styles.introTitle}>学んで、成長する</h1>
+      <p style={styles.introDescription}>プログラミング学習アプリ</p>
     </section>
   );
 };

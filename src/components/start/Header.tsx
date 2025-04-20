@@ -4,7 +4,7 @@ import { styles } from './styles';
 const Header: React.FC = () => {
   return (
     <header style={styles.header}>
-      <h1 style={styles.title}>プログラミング学習アプリ</h1>
+      <h1 style={styles.title}>Hack-and-learn</h1>
     </header>
   );
 };

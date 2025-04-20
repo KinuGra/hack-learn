@@ -7,6 +7,9 @@ const JavaScriptMain: React.FC = () => {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
+        <button style={styles.backButton} onClick={() => navigate('/')}>
+          ← 戻る
+        </button>
         <h1 style={styles.title}>JavaScript 学習コース</h1>
       </header>
       <main style={styles.main}>
@@ -42,6 +45,19 @@ const styles = {
     backgroundColor: '#f7df1e',
     color: '#000',
     padding: '10px 0',
+    position: 'relative' as const,
+  },
+  backButton: {
+    position: 'absolute' as const,
+    left: '10px',
+    top: '10px',
+    padding: '5px 10px',
+    fontSize: '14px',
+    backgroundColor: '#fff',
+    color: '#000',
+    border: '1px solid #ccc',
+    borderRadius: '3px',
+    cursor: 'pointer',
   },
   title: {
     margin: 0,

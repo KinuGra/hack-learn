@@ -47,9 +47,9 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ closeSettings }) => {
         return (
           <div>
             <p>テーマを選択してください:</p>
-            <button style={styles.menuItem} onClick={() => changeTheme('green')}>緑</button>
-            <button style={styles.menuItem} onClick={() => changeTheme('blue')}>青</button>
-            <button style={styles.menuItem} onClick={() => changeTheme('dark')}>ダーク</button>
+            <button style={styles.button} onClick={() => changeTheme('green')}>緑</button>
+            <button style={styles.button} onClick={() => changeTheme('blue')}>青</button>
+            <button style={styles.button} onClick={() => changeTheme('dark')}>ダーク</button>
           </div>
         );
       default:

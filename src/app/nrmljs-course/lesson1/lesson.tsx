@@ -1,6 +1,7 @@
+import '../lesson/lesson.css'; // 新規追加
+import '../lesson/lessonbase.css'; // 新規追加
 import '../lesson/lessbtype';
 import { LessonBase } from '../lesson/lessonbase';
-
 
 export function Lesson1() {
     const allLessons = {

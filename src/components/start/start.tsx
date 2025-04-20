@@ -35,7 +35,7 @@ const Start: React.FC = () => {
         <button style={styles.iconButton} onClick={toggleMenu}>
           <span style={styles.hamburgerIcon}>☰</span>
         </button>
-        <button style={styles.iconButton} onClick={toggleSettings}> {/* 修正 */}
+        <button style={styles.iconButton} onClick={toggleSettings}>
           <span style={styles.settingsIcon}>⚙</span>
         </button>
       </div>

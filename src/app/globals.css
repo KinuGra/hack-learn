@@ -28,7 +28,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  margin: 0; /* 余白を削除 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 画面全体の高さを確保 */
+}
+
+#root, .lesson-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* コンテンツを画面全体に広げる */
+}
+
+footer {
+  margin-top: auto; /* フッターを一番下に配置 */
 }
 
 button {
@@ -45,11 +59,18 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
+/* 不要な線を削除するためのリセット */
 header, footer {
+  border: none;
+  box-shadow: none;
   background-color: var(--secondary-color);
   color: var(--foreground);
 }
 
 h1, h2, h3 {
   color: var(--accent-color);
+}
+
+.monaco-editor-container {
+  all: unset; /* すべてのスタイルをリセット */
 }

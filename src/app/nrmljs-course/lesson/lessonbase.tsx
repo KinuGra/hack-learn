@@ -26,7 +26,7 @@ export function LessonBase({ title, description, details, example, exoutput, wor
       <h2>Output</h2>
       <pre>{exoutput}</pre>
       {/* Next.jsのImageコンポーネントを使用 */}
-      {image && <Image src={image} alt="Lesson Image" width={500} height={300} />}
+      {image && <Image src={image} alt="Lesson Image" width={500} height={300} unoptimized />}
       <h2>やってみよう</h2>
       <p>{work}</p>
       <button onClick={handleClick}>できた!</button>

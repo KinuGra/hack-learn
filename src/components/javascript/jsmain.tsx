@@ -37,13 +37,15 @@ const JavaScriptMain: React.FC = () => {
 
 const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'var(--font-sans)',
     textAlign: 'center' as const,
     padding: '20px',
+    backgroundColor: 'var(--background)',
+    color: 'var(--foreground)',
   },
   header: {
-    backgroundColor: '#f7df1e',
-    color: '#000',
+    backgroundColor: 'var(--secondary-color)',
+    color: 'var(--foreground)',
     padding: '10px 0',
     position: 'relative' as const,
   },
@@ -53,14 +55,15 @@ const styles = {
     top: '10px',
     padding: '5px 10px',
     fontSize: '14px',
-    backgroundColor: '#fff',
-    color: '#000',
-    border: '1px solid #ccc',
+    backgroundColor: 'var(--primary-color)',
+    color: 'var(--foreground)',
+    border: '1px solid var(--secondary-color)',
     borderRadius: '3px',
     cursor: 'pointer',
   },
   title: {
     margin: 0,
+    color: 'var(--accent-color)',
   },
   main: {
     marginTop: '20px',
@@ -68,6 +71,7 @@ const styles = {
   description: {
     fontSize: '18px',
     marginBottom: '20px',
+    color: 'var(--foreground)',
   },
   buttonContainer: {
     display: 'flex',
@@ -78,16 +82,17 @@ const styles = {
   button: {
     padding: '10px 20px',
     fontSize: '16px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
+    backgroundColor: 'var(--primary-color)',
+    color: 'var(--foreground)',
     border: 'none',
     borderRadius: '5px',
     cursor: 'pointer',
+    transition: 'background-color 0.3s',
   },
   footer: {
     marginTop: '30px',
     fontSize: '14px',
-    color: '#888',
+    color: 'var(--foreground)',
   },
 };
 

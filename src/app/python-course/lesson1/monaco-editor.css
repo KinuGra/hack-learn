@@ -1,0 +1,45 @@
+.lesson-container {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lesson-header {
+  background-color: var(--secondary-color);
+  color: var(--foreground);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.lesson-title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+.lesson-main {
+  margin-top: 20px;
+}
+
+.lesson-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.monaco-editor-container {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.lesson-footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--foreground);
+  text-align: center;
+}

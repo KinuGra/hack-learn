@@ -1,25 +1,27 @@
 export const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'var(--font-sans)',
     textAlign: 'center' as const,
     padding: '40px',
     backgroundColor: 'var(--background)',
+    color: 'var(--foreground)',
     minHeight: '100vh',
-    position: 'relative' as const,
+    display: 'flex',
+    flexDirection: 'column' as const, // 型アサーションを追加
   },
   topBar: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 20px',
-    backgroundColor: '#388e3c',
+    backgroundColor: 'var(--secondary-color)',
   },
   iconButton: {
     backgroundColor: 'transparent',
     border: 'none',
     cursor: 'pointer',
     fontSize: '24px',
-    color: 'white',
+    color: 'var(--foreground)',
   },
   hamburgerIcon: {
     fontSize: '24px',
@@ -55,7 +57,7 @@ export const styles = {
     position: 'fixed' as const,
     top: '0',
     right: '0',
-    width: '300px',
+    width: '700px',
     height: '100%',
     backgroundColor: '#ffffff',
     boxShadow: '-2px 0 5px rgba(0, 0, 0, 0.2)',
@@ -86,6 +88,12 @@ export const styles = {
     color: '#388e3c',
     cursor: 'pointer',
     borderBottom: '1px solid #e0e0e0',
+    textAlign: 'center' as const, // 型アサーションを追加
+    width: '150px',
+    height: '40px',
+    lineHeight: '40px',
+    display: 'block',
+    margin: '0 auto',
   },
   header: {
     backgroundColor: 'var(--secondary-color)',

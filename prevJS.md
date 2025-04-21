@@ -276,4 +276,9 @@ github-dark.css
  ## 課題
  脆弱性-評価を以下のコードで行っているため、
  const result = eval(code);
- 
+
+https://ja.react.dev/learn
+CodeSandboxのAPI(だと思われる) 
+![image](https://github.com/user-attachments/assets/f423372d-53f5-480a-b375-08bd5faf9b08)
+できればこういうAPI使ってやりたい。
+

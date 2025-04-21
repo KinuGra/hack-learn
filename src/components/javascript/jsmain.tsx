@@ -82,12 +82,13 @@ const styles = {
   button: {
     padding: '10px 20px',
     fontSize: '16px',
-    backgroundColor: 'var(--primary-color)',
-    color: 'var(--foreground)',
+    backgroundColor: '#4caf50', // 緑ベース
+    color: 'white',
     border: 'none',
     borderRadius: '5px',
     cursor: 'pointer',
     transition: 'background-color 0.3s',
+    fontWeight: 'bold',
   },
   footer: {
     marginTop: '30px',

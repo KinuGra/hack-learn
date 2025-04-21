@@ -1,5 +1,5 @@
 
-            import React from 'react';
+import React from 'react';
 import './styles.css'; // 必要に応じてCSSファイルを作成してください
 
 const AppLayout = () => {

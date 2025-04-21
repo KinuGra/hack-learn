@@ -1,11 +1,10 @@
 export type jsles = {
     title: string;
     description: string;
-    details : string;
+    details: string;
     example: string;
-    //exoutputはstring型ではなくコード型？で
-    exoutput: string;
+    exoutput: React.ReactNode; // 型をReact.ReactNodeに変更
     work: string;
     image?: any;
     onClick?: () => void;
-}
+};

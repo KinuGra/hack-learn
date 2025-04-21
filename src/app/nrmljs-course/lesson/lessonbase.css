@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d; /* 黒を基調 */
+  color: #d1c4e9; /* 薄い紫 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 高さを最小限に調整 */
+  overflow: auto; /* コンテンツが飛び出さないようにスクロールを許可 */
+}
+
+.container {
+  max-width: 800px;
+  width: 100%; /* 幅を100%に近づける */
+  background-color: #1a1a1a; /* ダークグレー */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  margin: 20px; /* 画面端に余白を追加 */
+}
+
+h1, h2 {
+  color: #b39ddb; /* 薄い紫 */
+}
+
+button {
+  background-color: #7e57c2; /* 紫 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #6a4ea0; /* ホバー時の濃い紫 */
+}
+
+pre {
+  background-color: #212121; /* ダークグレー */
+  color: #d1c4e9; /* 薄い紫 */
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+img {
+  border-radius: 10px;
+  margin: 20px 0;
+}

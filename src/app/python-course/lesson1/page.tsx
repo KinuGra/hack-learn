@@ -1,6 +1,6 @@
 "use client";
 
-import './monaco-editor.css'; // Monaco Editor専用のCSSをインポート
+
 import React, { useState } from 'react';
 import Editor from '@monaco-editor/react';
 

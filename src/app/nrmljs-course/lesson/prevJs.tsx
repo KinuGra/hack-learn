@@ -63,16 +63,35 @@ export function DisplaySetJs() {
         originalConsoleError.current(...args);
       };
 
-      // eslint-disable-next-line no-eval
-      const result = eval(code);
-
-      // Resultを明確に表示
-      if (result !== undefined) {
-        setConsoleOutput((prevOutput) => [
-          ...prevOutput,
-          { type: "success", message: `Result: ${JSON.stringify(result, null, 2)}` },
+      // タイムアウト付きでコードを実行
+      const executeWithTimeout = (code: string, timeout: number) => {
+        return Promise.race([
+          new Promise((resolve, reject) => {
+            // eslint-disable-next-line no-eval
+            const result = eval(code);
+            resolve(result);
+          }),
+          new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("実行がタイムアウトしました")), timeout)
+          ),
         ]);
-      }
+      };
+
+      executeWithTimeout(code, 2000)
+        .then((result) => {
+          if (result !== undefined) {
+            setConsoleOutput((prevOutput) => [
+              ...prevOutput,
+              { type: "success", message: `Result: ${JSON.stringify(result, null, 2)}` },
+            ]);
+          }
+        })
+        .catch((error) => {
+          setConsoleOutput((prevOutput) => [
+            ...prevOutput,
+            { type: "error", message: `Error: ${error.message}` },
+          ]);
+        });
     } catch (error: any) {
       setConsoleOutput((prevOutput) => [
         ...prevOutput,

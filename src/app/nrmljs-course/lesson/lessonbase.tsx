@@ -30,7 +30,7 @@ export function LessonBase({ title, description, details, example, exoutput, wor
       {image && <Image src={image} alt="Lesson Image" width={500} height={300} unoptimized />}
       <h2>やってみよう</h2>
       <p>{work}</p>
-      <DisplaySetJs />
+      <DisplaySetJs ans= {"リンゴ食べたい"} />
       <button 
         onClick={handleClick} 
         style={{

@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../lesson/github-dark.css";
 
-export function DisplaySetJs() {
+export function DisplaySetJs({ ans }: { ans?: any }) {
   const [code, setCode] = useState<string>("");
   const [consoleOutput, setConsoleOutput] = useState<
     { type: "log" | "error" | "success"; message: string }[]
   >([]);
+  const [verificationMessage, setVerificationMessage] = useState<string>("");
   const originalConsoleLog = useRef(console.log);
   const originalConsoleError = useRef(console.error);
 
@@ -117,6 +118,41 @@ export function DisplaySetJs() {
     }
   };
 
+  const handleVerifyCode = () => {
+    try {
+      setVerificationMessage(""); // Reset message
+      setConsoleOutput([]); // Clear console output for fresh verification
+
+      // Temporary console.log override to capture output
+      const capturedLogs: string[] = [];
+      console.log = (...args: any[]) => {
+        capturedLogs.push(args.join(" "));
+        originalConsoleLog.current(...args);
+      };
+
+      // eslint-disable-next-line no-eval
+      eval(code);
+
+      // Restore original console.log
+      console.log = originalConsoleLog.current;
+
+      // Compare captured logs with the expected answer
+      const trimmedLogs = capturedLogs.map((log) => log.trim());
+      const trimmedAns = typeof ans === "string" ? ans.trim() : ans;
+
+      if (trimmedLogs.includes(trimmedAns)) {
+        setVerificationMessage("correct!");
+      } else {
+        setVerificationMessage("uncorrect!");
+      }
+    } catch (error: any) {
+      setVerificationMessage("uncorrect!"); // Treat errors as incorrect
+    } finally {
+      // Restore original console.log in case of errors
+      console.log = originalConsoleLog.current;
+    }
+  };
+
   const handleClearConsole = () => {
     setConsoleOutput([]);
   };
@@ -160,6 +196,23 @@ export function DisplaySetJs() {
         >
           実行
         </button>
+        <button
+          onClick={handleVerifyCode}
+          style={{
+            marginRight: "10px",
+            backgroundColor: "#005cc5",
+            color: "#fff",
+            border: "none",
+            padding: "8px 16px",
+            borderRadius: "6px",
+            cursor: "pointer",
+          }}
+        >
+          確認
+        </button>
+        <span style={{ marginLeft: "10px", fontWeight: "bold" }}>
+          {verificationMessage}
+        </span>
         <button
           onClick={handleClearConsole}
           style={{

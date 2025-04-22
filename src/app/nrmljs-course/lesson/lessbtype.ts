@@ -6,5 +6,6 @@ export type jsles = {
     exoutput: React.ReactNode; // 型をReact.ReactNodeに変更
     work: string;
     image?: any;
+    answer: any;
     onClick?: () => void;
 };

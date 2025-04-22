@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { jsles } from './lessbtype';
 import { useNavigate } from 'react-router-dom';
 
-export function LessonBase({ title, description, details, example, exoutput, work, image, onClick}: jsles) {
+export function LessonBase({ title, description, details, example, exoutput, work, answer, image, onClick}: jsles) {
     const navigate = useNavigate();
     const handleClick = () => {
         if (onClick) {  
@@ -30,7 +30,7 @@ export function LessonBase({ title, description, details, example, exoutput, wor
       {image && <Image src={image} alt="Lesson Image" width={500} height={300} unoptimized />}
       <h2>やってみよう</h2>
       <p>{work}</p>
-      <DisplaySetJs ans= {"リンゴ食べたい"} />
+      <DisplaySetJs ans= {answer} />
       <button 
         onClick={handleClick} 
         style={{

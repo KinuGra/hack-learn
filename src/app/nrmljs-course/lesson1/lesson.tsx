@@ -11,6 +11,7 @@ export function Lesson1() {
         example: "console.log(\"Hello World\");",
         exoutput: "Hello World",
         work: "Hello World を表示してみよう",
+        answer: "Hello World",
         onClick: () => {
             console.log("Lesson 1 clicked");
         },
@@ -27,6 +28,7 @@ export function Lesson2() {
         example: "alert(\"Hello World\");",
         exoutput: "Hello World",
         work: "Hello World と、アラートで表示してみよう",
+        answer: "",
         onClick: () => {
             console.log("Lesson 2 clicked");
         },
@@ -43,6 +45,7 @@ export function Lesson3() {
         example: "prompt(\"Hello World\");",
         exoutput: "Hello World",
         work: "Hello World をプロンプトで表示してみよう",
+        answer: "",
         onClick: () => {
             prompt("Lesson 3 clicked");
         },
@@ -55,11 +58,12 @@ export function Lesson4() {
     const allLessons = {
         title: "変数と定数",
         description: "変数と定数を使う",
-        details: 
+        details:
             "letとconstを使って、変数と定数を使います。変数は変更可能で、定数は変更できません。使い道→変数は一時的な値を保存するのに使い、定数は変更しない値を保存するのに使います。応用レッスンでだんだんとわかってきますので、今はざっくりわかっていれば大丈夫です。",
         example: "let x = 10; const y = 20; console.log(x + y);",
         exoutput: "30",
         work: "変数xに500、定数yに30を代入して、xとyを足してみよう",
+        answer: 530,
         onClick: () => {
             console.log("Lesson 4 clicked");
         }
@@ -68,32 +72,35 @@ export function Lesson4() {
         <LessonBase {...allLessons} />
     );
 }
-export function Lesson5(){
+export function Lesson5() {
     const allLessons = {
         title: "数値型、文字列型",
-        description: "数値型、文字列型を使う", 
+        description: "数値型、文字列型を使う",
         details: "数値型と文字列型を使います。数値型は数字を扱い、文字列型は文字を扱います。使い道→数値型は計算に使い、文字列型は文字の操作に使います。",
         example: "let x = \"10\"; const y = \"20\"; console.log(x + y);",
         exoutput: "30",
         work: "数値型xに500、数値型yに30を代入して、xとyを足してみよう。 \n 文字列型xに500、文字列型yに30を代入して、xとyを足してみよう。",
-        
+        answer: "530\n50030",
+
     };
     return (
         <LessonBase {...allLessons} />
     );
 }
-export function Lesson6(){
+export function Lesson6() {
     const allLessons = {
         title: "真偽値型",
-        description: "真偽値型を使う", 
+        description: "真偽値型を使う",
         details: "真偽値型を使います。真偽値型はtrueまたはfalseの値を持ちます。使い道→条件分岐やループ処理に使います。",
         image: "/booleanimage.svg",
-        example: "while (true) { console.log(\"Hello World\"); }",
-        exoutput: "Hello World\nHello World\nHello World\n...",
-        work: "while文を使って、\"こんにちは！ぼくだよ\"と表示してみよう",
+        example: "while (i < 5) {\n  console.log(\"Hello World\") \n  i += 1; \n}",
+        exoutput: "Hello World Hello World Hello World Hello World Hello World",
+        work: "while文を使って、\"こんにちは！ぼくだよ\"と8回表示してみよう",
+        answer: {
+            " こんにちは！ぼくだよ ": 7, },
         
     };
-    return (
-        <LessonBase {...allLessons} />
+        return(
+        <LessonBase { ...allLessons } />
     );
 }

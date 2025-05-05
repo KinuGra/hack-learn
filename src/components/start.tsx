@@ -3,6 +3,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRouter } from 'next/navigation';
+import Header from './Header';
+import LangCard from './LangCard'; // 新しいコンポーネントをインポート
 
 const HomeScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -14,17 +16,26 @@ const HomeScreen: React.FC = () => {
 
   return (
     <div style={styles.container}>
-      <header style={styles.header}>
-        <h1 style={styles.title}>プログラミング学習アプリ</h1>
-      </header>
+      <Header />
       <main style={styles.main}>
         <p style={styles.description}>
           プログラミングを楽しく学びましょう！以下のコースから選んでください。
         </p>
-        <div style={styles.buttonContainer}>
-          <button style={styles.button} onClick={navigateToPythonCourse}>Python</button>
-          <button style={styles.button} onClick={() => navigate('/javascript-course')}>JavaScript</button>
-          <button style={styles.button}>C++</button>
+        <div style={styles.cardContainer}>
+          <LangCard
+            title="Python"
+            description="Pythonの基本から応用まで学べます。"
+            onClick={navigateToPythonCourse}
+          />
+          <LangCard
+            title="JavaScript"
+            description="JavaScriptのスキルを磨きましょう。"
+            onClick={() => navigate('/javascript-course')}
+          />
+          <LangCard
+            title="C++"
+            description="C++の基礎を学びましょう。"
+          />
         </div>
       </main>
       <footer style={styles.footer}>
@@ -38,15 +49,6 @@ const styles = {
   container: {
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center' as const,
-    padding: '20px',
-  },
-  header: {
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    padding: '10px 0',
-  },
-  title: {
-    margin: 0,
   },
   main: {
     marginTop: '20px',
@@ -55,19 +57,12 @@ const styles = {
     fontSize: '18px',
     marginBottom: '20px',
   },
-  buttonContainer: {
+  cardContainer: {
     display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    gap: '20px',
+    marginTop: '20px',
   },
   footer: {
     marginTop: '30px',

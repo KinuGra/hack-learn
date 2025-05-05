@@ -4,7 +4,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRouter } from 'next/navigation';
 import Header from './Header';
-import LangCard from './LangCard'; // 新しいコンポーネントをインポート
+import LangCard from './LangCard';
+import Footer from './Footer';
 
 const HomeScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const HomeScreen: React.FC = () => {
 
   return (
     <div style={styles.container}>
-      <Header />
+      <Header title="HACK LEARN" />
       <main style={styles.main}>
         <p style={styles.description}>
           プログラミングを楽しく学びましょう！以下のコースから選んでください。
@@ -38,9 +39,7 @@ const HomeScreen: React.FC = () => {
           />
         </div>
       </main>
-      <footer style={styles.footer}>
-        <p>© 2025 プログラミング学習アプリ</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
@@ -63,11 +62,6 @@ const styles = {
     alignItems: 'center',
     gap: '20px',
     marginTop: '20px',
-  },
-  footer: {
-    marginTop: '30px',
-    fontSize: '14px',
-    color: '#888',
   },
 };
 

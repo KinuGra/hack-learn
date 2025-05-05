@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const PythonCourse: React.FC = () => {
   const router = useRouter();
@@ -12,9 +14,7 @@ const PythonCourse: React.FC = () => {
 
   return (
     <div style={styles.container}>
-      <header style={styles.header}>
-        <h1 style={styles.title}>Python 学習コース</h1>
-      </header>
+      <Header title="Python 学習コース" />
       <main style={styles.main}>
         <p style={styles.description}>
           Pythonの基本から応用まで学べるコースです。以下のレッスンを選んでください。
@@ -37,9 +37,7 @@ const PythonCourse: React.FC = () => {
           </li>
         </ul>
       </main>
-      <footer style={styles.footer}>
-        <p>© 2025 プログラミング学習アプリ</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
@@ -48,15 +46,6 @@ const styles = {
   container: {
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center' as const,
-    padding: '20px',
-  },
-  header: {
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    padding: '10px 0',
-  },
-  title: {
-    margin: 0,
   },
   main: {
     marginTop: '20px',
@@ -69,11 +58,6 @@ const styles = {
     listStyleType: 'none',
     padding: 0,
     fontSize: '16px',
-  },
-  footer: {
-    marginTop: '30px',
-    fontSize: '14px',
-    color: '#888',
   },
   lessonButton: {
     padding: '10px 20px',

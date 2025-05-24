@@ -6,7 +6,7 @@ interface LangCardProps {
   onClick?: () => void;
 }
 
-const LangCard: React.FC<LangCardProps> = ({ title, description, onClick }) => {
+export function LangCard({ title, description, onClick}:LangCardProps){
   return (
     <div style={styles.card} onClick={onClick}>
       <h2 style={styles.cardTitle}>{title}</h2>

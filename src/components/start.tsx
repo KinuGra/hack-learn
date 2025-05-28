@@ -6,14 +6,25 @@ import { useRouter } from 'next/navigation';
 import Header from './Header';
 import LangCard from './LangCard';
 import Footer from './Footer';
+import { ChooseLessonPage } from './chooseLessonPage'
 
 const HomeScreen: React.FC = () => {
   const navigate = useNavigate();
   const router = useRouter();
 
-  const navigateToPythonCourse = () => {
-    router.push('/python-course');
-  };
+  const lessons = [
+      {
+        title: "Python",
+        description: "Pythonの基本から応用まで学べます",
+        routes: '/python-course'
+      },
+      {
+        title: "JavaScript",
+        description: "JavaScriptのスキルを磨きましょう。",
+        routes: '/javascript-course'
+      },
+
+    ];
 
   return (
     <div style={styles.container}>
@@ -23,20 +34,7 @@ const HomeScreen: React.FC = () => {
           プログラミングを楽しく学びましょう！以下のコースから選んでください。
         </p>
         <div style={styles.cardContainer}>
-          <LangCard
-            title="Python"
-            description="Pythonの基本から応用まで学べます。"
-            onClick={navigateToPythonCourse}
-          />
-          <LangCard
-            title="JavaScript"
-            description="JavaScriptのスキルを磨きましょう。"
-            onClick={() => navigate('/javascript-course')}
-          />
-          <LangCard
-            title="C++"
-            description="C++の基礎を学びましょう。"
-          />
+          <ChooseLessonPage lessons={lessons} />
         </div>
       </main>
       <Footer />
